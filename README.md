@@ -1,1 +1,1 @@
-# freecodeCamp-RWD
+# Responsive Web Design - freeCodeCamp
