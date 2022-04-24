@@ -1,0 +1,53 @@
+/* 
+Sintaxis General:
+background: linear-gradient(gradient_direction, color,color2,color3...);
+
+*/
+section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+}
+
+div{
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.one{
+  background: linear-gradient(90deg,red,yellow);
+}
+
+.two{
+  background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+}
+
+/* repeating-linear-gradient */
+
+.three{
+  background: repeating-linear-gradient(
+    90deg,
+  yellow 0px,
+  blue 40px,
+  green 40px,
+  red 80px
+  );
+  color: white;
+}
+
+.four{
+  background: repeating-linear-gradient(
+    45deg,
+    yellow 0px,
+    yellow 40px,
+    black 40px,
+    black 80px
+  );
+  color: white;
+}
