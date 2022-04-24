@@ -120,3 +120,34 @@ Cuando los elementos tienen una position, como fixed o relative, las propiedades
     left: 0px;
   }
 }
+
+/*  */
+.animation-iteration{
+  height: 400px;
+  margin-top: 50px;
+}
+
+.ballon{
+  background: linear-gradient(55deg, orange, rgb(255, 38, 0), yellow);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce{
+  0%{
+    top: 0px;
+  }
+  50%{
+    top: 70%;
+    height: 120px;
+    width: 200px;
+  }
+  100%{
+    top: 0px;
+  }
+}
