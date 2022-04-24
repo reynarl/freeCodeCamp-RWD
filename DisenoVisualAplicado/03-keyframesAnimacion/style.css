@@ -1,0 +1,122 @@
+div{
+  width: 500px;
+  height: 100px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+
+.animation{
+  background: orangered;
+  animation-name: rainbow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+  0%{
+    background-color: yellowgreen;
+  }
+  50%{
+    background-color: lightgreen;
+  }
+  100%{
+    background-color: greenyellow;
+  }
+}
+
+/* Animacion al poner cursor sobre el logo */
+.logo img{
+  width: 30px;
+}
+
+.logo img:hover{
+  animation-name: width;
+  animation-duration: 800ms;
+  /* animation-fill-mode permite que la animación permanezca al tener el cursor sobre el logo */
+  animation-fill-mode: forwards; 
+}
+
+@keyframes width{
+  100%{
+    width: 80px;
+  }
+}
+
+/* Crear movimiento usando animación CSS
+
+Cuando los elementos tienen una position, como fixed o relative, las propiedades de desplazamiento CSS right, left, top y bottom se pueden usar en las reglas de animación para crear movimiento. */
+
+.move{
+  position: relative;
+  background-color: aquamarine;
+  animation-name: moves;
+  animation-duration: 5s;
+}
+
+/* Moviendo de arriba hacia abajo */
+@keyframes moves{
+  0%{
+    background-color: aqua;
+    top: 0px;
+  }
+  50%{
+    background-color: aquamarine;
+    top: 25px;
+  }
+  100%{
+    background-color: aqua;
+    top: -25px;
+  }
+}
+/* Moviendo de lado a lado */
+
+.move-left{
+  position: relative;
+  background-color: aquamarine;
+  animation-name: moveLeft;
+  animation-duration: 5s;
+}
+
+@keyframes moveLeft{
+  0%{
+    left: 0px;
+    background-color: aqua;
+  }
+  50%{
+    left: 50px;
+    background-color: aquamarine;
+  }
+  100%{
+    left: -50px;
+    background-color: aqua;
+  }
+}
+
+/* Desvaneciendo un elemento de izq a derecha */
+
+.circle{
+  background: linear-gradient(35deg, salmon, white);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 50px;
+  position: relative;
+  animation-name: fade;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade{
+  0%{
+    left: 0px;
+  }
+  50%{
+    left: 20%;
+    opacity: 0.1;
+  }
+  100%{
+    left: 0px;
+  }
+}
